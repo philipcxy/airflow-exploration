@@ -39,8 +39,7 @@ with DAG(
     start_date=datetime(2021, 1, 1),
     catchup=False,
     tags=["example"],
-) as dag:
-    # t1, t2 and t3 are examples of tasks created by instantiating operators
+) as dag:  # t1, t2 and t3 are examples of tasks created by instantiating operators
     t1 = BashOperator(
         task_id="print_date",
         bash_command="date",
